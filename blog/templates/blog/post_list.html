@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+{% block title %}Посты из категории {{ title }}{% endblock %}
+
+{% block content %}
+    <main>
+        <section>
+            <div class="container">
+                <h1>Посты из категории {{ title }}</h1>
+            </div>
+        </section>
+        <div>
+            {% for post in object_list %}
+                <div>
+                    <h3>{{ post }}</h3>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}
